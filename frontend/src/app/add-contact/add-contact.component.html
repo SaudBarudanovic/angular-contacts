@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="table-wrapper">
+    <div class="table-title">
+      <div class="row">
+        <div class="col-sm-5">
+          <h2>Edit Contact</h2>
+        </div>
+      </div>
+    </div>
+    <form #createForm="ngForm" (ngSubmit)="createContact(createForm.value)" ngClass="newcontact-form">
+      <input placeholder="First Name" name="first_name" type="text" ngModel>
+      <input placeholder="Last Name" name="last_name" type="text" ngModel>
+      <input placeholder="Email" name="email" type="text" ngModel>
+      <input placeholder="Phone" name="phone" type="text" ngModel>
+      <button type="submit"><a href="/" class="btn btn-primary"><span>Save Contact</span></a></button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="table-wrapper">
+    <div class="table-title">
+      <div class="row">
+        <div class="col-sm-5">
+          <h2>Edit Contact</h2>
+        </div>
+      </div>
+    </div>
+    <form #updateForm="ngForm" (ngSubmit)="updateContact(updateForm.value)" ngClass="newcontact-form" *ngFor="let contact of contacts">
+      <input hidden type="text" name="id" ngModel="{{ contact.id }}">
+      <input name="first_name" type="text" ngModel="{{ contact.first_name }}">
+      <input name="last_name" type="text" ngModel="{{ contact.last_name }}">
+      <input name="email" type="text" ngModel="{{ contact.email }}">
+      <input name="phone" type="text" ngModel="{{ contact.phone }}">
+      <div ngClass="edit-buttons">
+        <button type="submit"><a href="/" class="btn btn-primary"><span>Save Contact</span></a></button>
+        <a href="/" class="btn btn-danger" (click)="deleteContact(contact.id)"><span>Delete Contact</span></a>
+      </div>
+    </form>
+  </div>
+</div>

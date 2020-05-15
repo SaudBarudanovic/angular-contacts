@@ -1,0 +1,9 @@
+<div *ngFor="let contact of contacts; let i = index">
+  <p>{{ i + 1 }}</p>
+  <p>{{ contact.first_name + ' ' + contact.last_name }}</p>
+  <p>{{ contact.email }} </p>
+  <p>{{ contact.phone }} </p>
+  <p class="action-buttons">
+    <a href="/contacts/{{ contact.id }}" ngClass="settings" title="Settings" data-toggle="tooltip"><i class="material-icons">&#xE8B8;</i></a>
+  </p>
+</div>
